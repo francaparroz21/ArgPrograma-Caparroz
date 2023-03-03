@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,8 +37,13 @@ public class Main {
         System.out.println(Arrays.toString(sortNumbers(numbers)));
 
         /*
-
+        2 -Genere una clase que tenga los métodos para realizar la codificación y decodificación
+        de un string, dado un número de desplazamiento.
          */
+
+        Point2 p2 = new Point2();
+        //expected: ipmbarvfaubm
+        System.out.println(p2.decodify1("hola que tal"));
     }
         public static int getRepeatedLetterCount(String text, char letter){
             int count = 0;
