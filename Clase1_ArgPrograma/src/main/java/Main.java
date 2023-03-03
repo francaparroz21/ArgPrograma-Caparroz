@@ -37,7 +37,7 @@ public class Main {
                     if (number % 2 != 0) System.out.println("Odd number: " + number);
                     break;
                 default:
-                    System.out.println("Incorrect. The only inputs values are 'pair' and 'odd'. ");
+                    System.out.println("Incorrect. The only inputs values are: {'pair','odd'} . ");
                     break;
             }
             number++;
@@ -47,5 +47,10 @@ public class Main {
         for (int i = 14; i > startNumber; i--) {
             if (i % 2 == 0) System.out.println("Pair number: " + i);
         }
+
+
+        //Punto 2
+        //No se entiende
+
     }
 }
