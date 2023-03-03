@@ -11,6 +11,8 @@ public class Main {
         siguientes métodos:
          */
 
+        Point1 p1 = new Point1();
+
         /*
         A - Dado un String y una letra, que cuente la cantidad de apariciones de la letra en
         el String
@@ -21,11 +23,11 @@ public class Main {
 
         //oso polar | 'o'
         //expected: 3
-        System.out.println("Count: " + getRepeatedLetterCount("oso polar",'o'));
+        System.out.println("Count: " + p1.getRepeatedLetterCount("oso polar", 'o'));
 
 
         /*
-        Dados 3 números y un orden (ascendente o decreciente) que ordene los
+        B - Dados 3 números y un orden (ascendente o decreciente) que ordene los
         mismos y los retorne en un vector de 3
 
         sortNumbers
@@ -33,8 +35,17 @@ public class Main {
 
         //1,6,4,2,7,18,999
         //expected: 1,2,4,6,7,18,999
-        int[] numbers = new int[]{1,6,4,2,7,18,999};
-        System.out.println(Arrays.toString(sortNumbers(numbers)));
+        int[] numbers = new int[]{1, 6, 4, 99, 2, 7, 18, 999};
+        System.out.println(Arrays.toString(p1.sortNumbers(numbers)));
+
+        /*
+        c. dado un vector de números, y un número X, que sume todos los números > X y
+        retorne el resultado
+
+         */
+        //Expected: 31
+        int[] numbersSum = new int[]{1, 6, 4, 2, 7, 18};
+        System.out.println(p1.greatestNumberSum(numbersSum, 4));
 
         /*
         2 -Genere una clase que tenga los métodos para realizar la codificación y decodificación
@@ -44,27 +55,7 @@ public class Main {
         Point2 p2 = new Point2();
         //expected: ipmbarvfaubm
         System.out.println(p2.decodify1("hola que tal"));
+        //expected: “jqncbswgbvcn”
+        System.out.println(p2.decodify2(("hola que tal")));
     }
-        public static int getRepeatedLetterCount(String text, char letter){
-            int count = 0;
-            for (int i = 0; i<text.length();i++){
-                if (letter == text.charAt(i)){
-                    count++;
-                }
-            }
-            return count;
-        }
-
-        public static int[] sortNumbers(int[] numbers){
-            int aux;
-            for(int i = 0; i < numbers.length-1; i++)
-                for(int j=0; j < numbers.length-i-1; j++)
-                    //Segun como lo quisieramos ordenar, cambiariamos el < por > y viceversa.
-                    if(numbers[j+1] < numbers[j]){
-                        aux = numbers[j+1];
-                        numbers[j+1] = numbers[j];
-                        numbers[j] = aux;
-                    }
-            return numbers;
-        }
 }
